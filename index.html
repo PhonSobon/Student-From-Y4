@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <h2>Student Form</h2>
+
+    <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" required>
+    </div>
+    <div class="form-group">
+        <label>Gender:</label>
+        <div class="radio-group">
+            <label><input type="radio" name="gender" value="Male" required> Male</label>
+            <label><input type="radio" name="gender" value="Female"> Female</label>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="group">Group:</label>
+        <select id="group" required>
+            <option value="E1">E1</option>
+            <option value="E2">E2</option>
+            <option value="E3">E3</option>
+            <option value="E4">E4</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="web">Web:</label>
+        <input type="number" id="web" required>
+    </div>
+    <div class="form-group">
+        <label for="se">SE:</label>
+        <input type="number" id="se" required>
+    </div>
+    <div class="form-group">
+        <label for="mis">MIS:</label>
+        <input type="number" id="mis" required>
+    </div>
+    <div class="form-group">
+        <label for="linux">Linux:</label>
+        <input type="number" id="linux" required>
+    </div>
+    <div class="form-group">
+        <label for="ooad">OOAD:</label>
+        <input type="number" id="ooad" required>
+    </div>
+    <button class="btn" onclick="addStudent()">Add</button>
+
+    <div class="filter-group">
+        <label for="filterGroup">Filter by Group:</label>
+        <select id="filterGroup" onchange="filterTable()">
+            <option value="">All</option>
+            <option value="E1">E1</option>
+            <option value="E2">E2</option>
+            <option value="E3">E3</option>
+            <option value="E4">E4</option>
+        </select>
+
+        <label for="filterGender">Filter by Gender:</label>
+        <select id="filterGender" onchange="filterTable()">
+            <option value="">All</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+        </select>
+
+        <label for="filterGrade">Filter by Grade:</label>
+        <select id="filterGrade" onchange="filterTable()">
+            <option value="">All</option>
+            <option value="A">A</option>
+            <option value="B">B</option>
+            <option value="C">C</option>
+            <option value="D">D</option>
+            <option value="F">F</option>
+        </select>
+    </div>
+
+    <table id="studentTable">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Gender</th>
+                <th>Group</th>
+                <th>Web</th>
+                <th>SE</th>
+                <th>MIS</th>
+                <th>Linux</th>
+                <th>OOAD</th>
+                <th>Total</th>
+                <th>Grade</th>
+            </tr>
+        </thead>
+        <tbody>
+  
+        </tbody>
+    </table>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
